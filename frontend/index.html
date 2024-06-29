@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Judge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Code Judge</h1>
+        <form id="codeForm">
+            <label for="language">Language:</label>
+            <select id="language">
+                <option value="java">Java</option>
+                <!-- Add more languages as needed -->
+            </select>
+
+            <label for="script">Script:</label>
+            <textarea id="script" rows="10" placeholder="Enter your code here..."></textarea>
+
+            <label for="stdin">Input:</label>
+            <input type="text" id="stdin" placeholder="Enter input values...">
+
+            <button type="submit">Execute</button>
+        </form>
+
+        <div class="output">
+            <h2>Output:</h2>
+            <pre id="output"></pre>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
