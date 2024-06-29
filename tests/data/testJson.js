@@ -184,6 +184,71 @@ const testCases = [
         },
     },
     {
+        name: 'java : simple arithmetic',
+        reqObject: {
+            language: 'java',
+            script:
+                'import java.util.Scanner;\n' +
+                'public class Solution {\n' +
+                '    public static void main(String[] args) {\n' +
+                '        Scanner scanner = new Scanner(System.in);\n' +
+                '        int a = scanner.nextInt();\n' +
+                '        int b = scanner.nextInt();\n' +
+                '        System.out.println(a + b);\n' +
+                '        scanner.close();\n' +
+                '    }\n' +
+                '}\n',
+            stdin: '3 4',
+        },
+        expectedResponse: {
+            val: '7\n',
+            status: 200,
+            error: 0,
+        },
+    },
+    {
+        name: 'java : string concatenation',
+        reqObject: {
+            language: 'java',
+            script:
+                'import java.util.Scanner;\n' +
+                'public class Solution {\n' +
+                '    public static void main(String[] args) {\n' +
+                '        Scanner scanner = new Scanner(System.in);\n' +
+                '        String a = scanner.next();\n' +
+                '        String b = scanner.next();\n' +
+                '        System.out.println(a + b);\n' +
+                '        scanner.close();\n' +
+                '    }\n' +
+                '}\n',
+            stdin: 'Hello World',
+        },
+        expectedResponse: {
+            val: 'HelloWorld\n',
+            status: 200,
+            error: 0,
+        },
+    },
+    {
+        name: 'java : loop output',
+        reqObject: {
+            language: 'java',
+            script:
+                'public class Solution {\n' +
+                '    public static void main(String[] args) {\n' +
+                '        for (int i = 0; i < 5; i++) {\n' +
+                '            System.out.println(i);\n' +
+                '        }\n' +
+                '    }\n' +
+                '}\n',
+        },
+        expectedResponse: {
+            val: '0\n1\n2\n3\n4\n',
+            status: 200,
+            error: 0,
+        },
+    },
+    {
         name: 'ruby : print hello world',
         reqObject: {
             language: 'ruby',
