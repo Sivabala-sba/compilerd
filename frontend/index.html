@@ -17,10 +17,18 @@
             </select>
 
             <label for="script">Script:</label>
-            <textarea id="script" rows="10" placeholder="Enter your code here..."></textarea>
+            <textarea id="script" rows="10" placeholder="Enter your code here...">public class Solution {
+    public static void main(String[] args) {
+        System.out.println("hello world");
+    }
+}
+</textarea>
+
+            <label for="enableStdin">Enable Input:</label>
+            <input type="checkbox" id="enableStdin">
 
             <label for="stdin">Input:</label>
-            <input type="text" id="stdin" placeholder="Enter input values...">
+            <input type="text" id="stdin" placeholder="Enter input values..." disabled>
 
             <button type="submit">Execute</button>
         </form>
